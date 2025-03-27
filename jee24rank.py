@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load Data
-df_merged = pd.read_csv("C:/Users/aditya namdeo/Downloads/df_merged.csv")
+df_merged = pd.read_csv("df_merged.csv")
 
 # Visualization Function
 def visualize(Institute, Seat_Type, Gender):
