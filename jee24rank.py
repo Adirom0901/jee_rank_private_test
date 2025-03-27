@@ -29,11 +29,18 @@ def visualize(Institute, Seat_Type, Gender):
     index = np.arange(len(df_filtered))
     width = 0.4
     x_labels = df_filtered["Academic Program Name"]
+    list=[]
+    for i in x_labels:
+        list.append(i)
+    lenth_list=[]
+    for i in range(len(list)):
+        lenth_list.append(i)
     ax.bar(index-width/2, df_filtered["Closing Rank"], width, label="Actual", alpha=0.7)
     ax.bar(index + width/2, df_filtered["Predicted Closing Rank 2024"], width, label="Predicted", alpha=0.7)
     ax.set_xlabel("Samples")
     ax.set_ylabel("Rank")
-    ax.xticks(ticks=index, labels=x_labels, rotation=90, fontsize=10)
+    ax.set_xticks(lenth_list)  # Correct way
+    ax.set_xticklabels(list)
     ax.set_title("Actual vs Predicted Ranks")
     ax.legend()
 
