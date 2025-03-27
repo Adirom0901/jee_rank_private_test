@@ -28,12 +28,13 @@ def visualize(Institute, Seat_Type, Gender):
     fig, ax = plt.subplots(figsize=(20, 12))
     index = np.arange(len(df_filtered))
     width = 0.4
-
+    x_labels = df_filtered["Academic Program Name"]
     ax.bar(index-width/2, df_filtered["Closing Rank"], width, label="Actual", alpha=0.7)
     ax.bar(index + width/2, df_filtered["Predicted Closing Rank 2024"], width, label="Predicted", alpha=0.7)
-
+    ax.ylabel("Closing Rank", fontsize=12)
     ax.set_xlabel("Samples")
     ax.set_ylabel("Rank")
+    ax.xticks(ticks=index, labels=x_labels, rotation=90, fontsize=10)
     ax.set_title("Actual vs Predicted Ranks")
     ax.legend()
 
