@@ -40,7 +40,7 @@ def visualize(Institute, Seat_Type, Gender):
     ax.set_xlabel("Samples")
     ax.set_ylabel("Rank")
     ax.set_xticks(lenth_list)  # Correct way
-    ax.set_xticklabels(list)
+    ax.set_xticklabels(list,rotation=90)
     ax.set_title("Actual vs Predicted Ranks")
     ax.legend()
 
