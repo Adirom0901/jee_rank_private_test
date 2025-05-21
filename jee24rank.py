@@ -57,12 +57,12 @@ def main():
     </div>
     """, unsafe_allow_html=True)
     st.markdown("""
-    <div style="text-align:right; margin-top:10px;">
-        <a href="https://your-company-website.com" target="_blank">
-            <img src="https://collegemap.in/static/media/collegeMapLogo.a38ff4563b8339e9f214.png" alt="Company Logo" width="100">
-        </a>
-    </div>
-    """, unsafe_allow_html=True)
+<div style="text-align:right; margin-top:10px;">
+    <a href="https://collegemap.in" target="_blank">
+        <img src="https://collegemap.in/static/media/collegeMapLogo.a38ff4563b8339e9f214.png" alt="Company Logo" width="120">
+    </a>
+</div>
+""", unsafe_allow_html=True)
 
     institutes = df_merged["Institute"].unique()
     seat_type = df_merged["Seat Type"].unique()
