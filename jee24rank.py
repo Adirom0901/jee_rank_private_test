@@ -49,6 +49,20 @@ def visualize(Institute, Seat_Type, Gender):
 # Streamlit UI
 def main():
     st.title("JEE Advance 2024 Ranks Prediction Analyzer")
+    st.markdown("""
+    <div style="background-color:#f9f9f9; padding:10px; border-left:5px solid #ffa500;">
+        <strong>Disclaimer:</strong> This is a comparison between actual 2024 closing ranks and our predicted ranks.
+        The 2025 predictions (not shown here) are expected to be more accurate as they are based on 4 years of historical data,
+        while the current predictions are based on only 3 years.
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown("""
+    <div style="text-align:right; margin-top:10px;">
+        <a href="https://your-company-website.com" target="_blank">
+            <img src="https://collegemap.in/static/media/collegeMapLogo.a38ff4563b8339e9f214.png" alt="Company Logo" width="100">
+        </a>
+    </div>
+    """, unsafe_allow_html=True)
 
     institutes = df_merged["Institute"].unique()
     seat_type = df_merged["Seat Type"].unique()
